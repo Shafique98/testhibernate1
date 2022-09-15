@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.velociter.hibernate.productdetails.ProductDetail"
+		table="PRODUCT">
+		<id name="prodID" column="ID">
+			<generator class="increment"></generator>
+		</id>
+		<property name="prodName" column="P_NAME" type="string"></property>
+		<property name="prodType" column="P_TYPE" type="string"></property>
+		<property name="prodCategory" column="P_CATEGORY" type="string"></property>
+		<property name="prodSplFeature" column="P_SPLFEATURE" type="string"></property>
+		<property name="prodMaterial" column="P_MATERIAL" type="string"></property>
+		<property name="prodCapacity" column="P_CAPACITY" type="string"></property>
+	</class>
+</hibernate-mapping>

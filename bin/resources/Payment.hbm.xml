@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.velociter.hibernate.payment.Payment" table="PAYMENT" discriminator-value="PAYMENT">
+
+		<id name="paymentID" column="PAYMENT_ID">
+			<generator class="increment"></generator>
+		</id>
+		<discriminator column="PAYMENT_TYPE" type="string"></discriminator>
+			<property name="amount" column="AMMOUNT" type="float"></property>
+		<subclass name="com.velociter.hibernate.payment.CreditCardPayment" discriminator-value="CREDIT">
+			<property name="CCType" column="CCTYPE" type="string"></property>
+		</subclass>
+		<subclass name="com.velociter.hibernate.payment.CashPayment" discriminator-value="CASH">
+			<property name="currencyType" column="CURRENCYTYPE" type="string"></property>
+		</subclass>
+
+		<subclass name="com.velociter.hibernate.payment.ChequePayment" discriminator-value="CHEQUE">
+			<property name="chequeNumber" column="CHEQUENUMBER" type="long"></property>
+		</subclass>
+	</class>
+
+</hibernate-mapping>

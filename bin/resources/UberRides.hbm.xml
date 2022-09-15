@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.velociter.hibernate.uber.UberRides" table="UBERRIDES">
+		<id name="rideID" column="ID">
+			<generator class="increment"></generator>		
+		</id>
+		<property name="rideFare" column="FARE" type="float"></property>
+		<property name="rideDistance" column="DISTANCE" type="double"></property>
+		<property name="rideStartTime" column="START_TIME" type="string"></property>
+		<property name="rideEndTime" column="END_TIME" type="string"></property>
+		<property name="riderName" column="RIDER_NAME" type="string"></property>
+		<property name="captainName" column="CAPTAIN_NAME" type="string"></property>
+		<property name="vehicalType" column="VEHICAL_TYPE" type="string"></property>
+		<property name="pickUpLocation" column="PICKUP" type="string"></property>
+		<property name="dropOffLocation" column="DROPOFF" type="string"></property>
+		<property name="paymentMethod" column="PAYMENT" type="string"></property>
+	</class>
+</hibernate-mapping>

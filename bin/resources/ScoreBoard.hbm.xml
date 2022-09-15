@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.velociter.hibernate.ipl.IPL_ScoreBoard" table="IPLSCOREBOARD">
+		<id name="playerID" column="ID">
+			<generator class="increment" />
+		</id>
+		<property name="playerFirstName" column="PLAYERFIRSTNAME" type="string"></property>
+		<property name="playerLastName" column="PLAYERLASTNAME" type="string"></property>
+		<property name="IPLRuns" column="IPLRUNS" type="int"></property>
+		<property name="AVGRuns" column="AVGRUNS" type="float"></property>
+		<property name="strikeRate" column="STRIKERATE" type="float"></property>
+		<property name="century" column="CENTURY" type="int"></property>
+		<property name="halfCentury" column="HALFCENTURY" type="int"></property>
+		<property name="numOfSix" column="NUMOFSIX" type="int"></property>
+		<property name="numOfFour" column="NUMOFFOUR" type="int"></property>
+		
+	</class>
+</hibernate-mapping>

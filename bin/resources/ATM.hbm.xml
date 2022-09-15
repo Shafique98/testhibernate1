@@ -1,0 +1,14 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.velociter.hibernate.atm.ATM" table="ATM">
+		<id name="id" column="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="costAccNum" column="ACCOUNT_NUM" type="long"></property>
+		<property name="costBankBalance" column="BANK_BALANCE" type="int"></property>
+		<property name="costAtmPin" column="ATM_PIN" type="int"></property>
+		<property name="costBankStatement" column="BANK_STATEMENT" type="string"></property>
+	</class>
+</hibernate-mapping>

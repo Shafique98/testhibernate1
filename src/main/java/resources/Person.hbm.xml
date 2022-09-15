@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.velociter.hibernate.person.Person"	table="PERSONINFORMATION" >
+		<id name = "id" column = "PERSONID">
+           <generator class="increment"/> 
+      </id>
+		 <property name="birthdate" type="date"></property> 
+		<component name="name" class="com.velociter.hibernate.person.Name">
+		 	 <!-- <parent name="com.velociter.hibernate.person.Person" /> -->
+		 	<parent name="namedPerson"/>
+			<property name="initial" column="INITIALS" type="char"></property>
+			<property name="first" type="string"></property>
+			<property name="last" type="string" ></property>
+		</component>
+		<component name="pq" class="com.velociter.hibernate.person.PersonQualification">
+			<property name="collegeStudied" type="string"></property>
+			<property name="qualification" type="string"></property>
+		</component>
+	</class>
+</hibernate-mapping>
