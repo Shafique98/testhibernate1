@@ -38,5 +38,16 @@
 		<mapping
 			class="com.velociter.hibernate.componentmapping.socialmedia.SocialMedia"></mapping>
 
+		<mapping
+			class="com.velociter.hibernate.componentmapping.recharge.MobileRecharge" />
+		<mapping
+			class="com.velociter.hibernate.componentmapping.dress.Dress" />
+		<mapping
+			class="com.velociter.hibernate.componentmapping.electronic.ElectronicProduct"></mapping>
+		<mapping
+			class="com.velociter.hibernate.componentmapping.movie.MovieTicket"></mapping>
+		<mapping
+			class="com.velociter.hibernate.componentmapping.student.Student"></mapping>
+
 	</session-factory>
 </hibernate-configuration>
